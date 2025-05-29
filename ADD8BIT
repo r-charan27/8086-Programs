@@ -1,0 +1,14 @@
+assume cs: code ,ds: code
+data segment
+     no1:02
+     no2:01
+data ends
+code segment
+     mov ax, data
+     mov ds, ax
+     mov al, no1
+     mov bl, no2
+     add al, bl
+     int 03h
+code ends
+end start
